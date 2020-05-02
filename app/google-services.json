@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1094785241962",
+    "firebase_url": "https://enviro2-6a6f7.firebaseio.com",
+    "project_id": "enviro2-6a6f7",
+    "storage_bucket": "enviro2-6a6f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094785241962:android:e9f9f54515b4f8f21a8b13",
+        "android_client_info": {
+          "package_name": "com.example.enviro2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094785241962-pcm43mim1upbrt7sgfltofpve2bmfshb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiO_AQEq0Z69QhY6Dw28B_42cURUybpyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094785241962-pcm43mim1upbrt7sgfltofpve2bmfshb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
