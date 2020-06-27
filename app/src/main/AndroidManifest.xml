@@ -5,32 +5,57 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:hardwareAccelerated="true"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Enviro"
+        android:label="ENVIRO"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".slider">
+        <activity android:name=".payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".EditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".splash"
+         android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".slider"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".Home"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".About" />
-        <activity android:name=".login">
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".About"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".register" />
-        <activity android:name=".MainActivity" />
-
+        <activity android:name=".register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"
+            android:parentActivityName=".Home"/>
     </application>
 
 </manifest>

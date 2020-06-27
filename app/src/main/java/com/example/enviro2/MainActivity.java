@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,9 +49,13 @@ public class MainActivity extends AppCompatActivity {
         fullname = findViewById(R.id.profileName);
         email = findViewById(R.id.profileEmail);
         phone = findViewById(R.id.profilePhone);
-
         profilepic = findViewById(R.id.profilepic);
         changebutton = findViewById(R.id.changebutton);
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        Log.d("tag", "onCreate:" + fAuth.getCurrentUser().getEmail() + fAuth.getCurrentUser().getDisplayName());
+        userId = fAuth.getCurrentUser().getUid();
+        final FirebaseUser user = fAuth.getCurrentUser();
 
         storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
@@ -60,11 +66,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
 
-        userId = fAuth.getCurrentUser().getUid();
-        final FirebaseUser user = fAuth.getCurrentUser();
+
 
      if (!user.isEmailVerified()){
          verifyMsg.setVisibility(View.VISIBLE);
@@ -94,11 +97,15 @@ public class MainActivity extends AppCompatActivity {
      documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
          @Override
          public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-           phone.setText(documentSnapshot.getString("phone"));
-           fullname.setText(documentSnapshot.getString("fname"));
-           email.setText(documentSnapshot.getString("email"));
+             if (documentSnapshot.exists()) {
+                 phone.setText(documentSnapshot.getString("phone"));
+                 fullname.setText(documentSnapshot.getString("fname"));
+                 email.setText(documentSnapshot.getString("email"));
 
-         }
+             }else{
+                     Log.d("tag","onEvent: Document do not exists");
+                 }
+             }
      });
 
 
@@ -107,9 +114,12 @@ public class MainActivity extends AppCompatActivity {
          @Override
          public void onClick(View v) {
              // open gallery
-             Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-             startActivityForResult(openGalleryIntent,1000);
-
+        Intent i = new Intent(v.getContext(),EditProfile.class);
+        i.putExtra("fullname",fullname.getText().toString());
+        i.putExtra("email",email.getText().toString());
+        i.putExtra("phone",phone.getText().toString());
+        startActivity(i);
+        //
          }
      });
 
@@ -118,45 +128,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1000){
-            if(resultCode == Activity.RESULT_OK){
-                Uri imageUri = data.getData();
 
-                //profilepic.setImageURI(imageUri);
-
-                uploadImageToFirebase(imageUri);
-
-            }
-        }
-    }
-
-    private void uploadImageToFirebase(Uri imageUri) {
-        //upload image to firebase storage
-        final StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
-        fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+    public void logout(final View view){
+  FirebaseAuth.getInstance().signOut();
+        GoogleSignIn.getClient(this,new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()).signOut().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        Picasso.get().load(uri).into(profilepic);
-                    }
-                });
+            public void onSuccess(Void aVoid) {
+                startActivity(new Intent (view.getContext(),login.class));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Signout Failed",Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    public void logout(View view){
-  FirebaseAuth.getInstance().signOut();
-    startActivity(new Intent(getApplicationContext(),login.class));
     finish();
     }
 }

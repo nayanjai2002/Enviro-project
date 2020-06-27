@@ -10,36 +10,45 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,MainFragment.onFragmentBtnSelected {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    Toolbar toolbar;
     NavigationView navigationView;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
 
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         actionBarDrawerToggle.syncState();
+
 
         //load default fragment
         fragmentManager = getSupportFragmentManager();
@@ -50,9 +59,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setCheckedItem(R.id.home);
     }
 
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        int id = menuItem.getItemId();
+        menuItem.getItemId();
         if (menuItem.getItemId() == R.id.home) {
             //open the home activity
             fragmentManager = getSupportFragmentManager();
@@ -72,23 +83,35 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(),About.class));
              finish();
         }
-        else if (menuItem.getItemId() == R.id.writeus) {
-
+        else if (menuItem.getItemId() == R.id.reward) {
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_fragment, new second_fragment());
             fragmentTransaction.commit();
         }
+        else if (menuItem.getItemId() == R.id.bonus) {
+            //open the About
+            startActivity(new Intent(getApplicationContext(),payment.class));
+            finish();
+        }
+        else if (menuItem.getItemId() == R.id.logout_nav) {
+            //logout
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(),login.class));
+            finish();
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
+
+
     @Override
     public void onButtonSelected() {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),login.class));
-        finish();
     }
 
     }

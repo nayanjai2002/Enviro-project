@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="General">
+    <menu>
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/reward"
+            android:icon="@drawable/reward"
+            android:title="Rewards" />
 
-    <item
-        android:id="@+id/home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home" />
-    <item
-        android:id="@+id/profile"
-        android:icon="@drawable/ic_account_box_black_24dp"
-        android:title="Profile" />
+    </menu>
+</item>
+    <item android:title="Communication">
+        <menu>
     <item
         android:id="@+id/share"
         android:icon="@drawable/ic_share_black_24dp"
         android:title="Share" />
     <item
-        android:id="@+id/writeus"
-        android:icon="@drawable/ic_create_black_24dp"
-        android:title="Write to us" />
-    <item
         android:id="@+id/aboutus"
         android:icon="@drawable/ic_info_outline_black_24dp"
         android:title="About Us" />
+            <item
+                android:id="@+id/bonus"
+                android:icon="@drawable/bonus"
+                android:title="Bonus" />
+        </menu>
+    </item>
     <item
-        android:id="@+id/ogout"
+        android:id="@+id/logout_nav"
         android:icon="@drawable/ic_exit_to_app_black_24dp"
         android:title="Log Out" />
 </menu>

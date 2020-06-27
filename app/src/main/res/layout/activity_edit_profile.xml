@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:padding="16dp"
+    tools:context=".EditProfile"
+    android:id="@+id/edit_profile">
+
+
+    <ImageView
+        android:id="@+id/profileUpdate"
+        android:layout_width="190dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="156dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="38dp"
+        android:text="UPDATE"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nameUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="1dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileUpdate"
+        android:hint="Your Name"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHighlight="#FBFAFA"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/emailUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameUpdate"
+        android:hint="Your Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FBFAFA"
+        android:textSize="30sp" />
+
+
+   <EditText
+        android:id="@+id/phoneUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailUpdate"
+        android:hint="Your Phone No."
+        android:inputType="number"
+        android:maxLength="10"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FBFAFA"
+        android:textSize="30sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

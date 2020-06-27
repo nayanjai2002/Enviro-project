@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient4">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reward_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="732dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/gradient4"
+        android:paddingTop="80dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="0dp"
+        android:tint="#DCD6D6"
+        app:srcCompat="@drawable/gift512" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Frafment"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:fontFamily="serif-monospace"
+        android:text="REWARDZZ"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="14dp"
+        />
+
+
+</FrameLayout>

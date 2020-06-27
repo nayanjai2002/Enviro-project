@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment"
+    android:background="@drawable/gradient_background">
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BONUS"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="EnviroSLC is a free app. and willalways be free and without any ads. for our grear users who
+wants to help us amke this project always better. Thank You for be a part of this."
+        android:textColor="#265D77"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0000" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:background="#ffff"
+            android:padding="8dp"
+            tools:context="simplifiedcoding.net.paytmpaymentsample.MainActivity">
+
+
+            <ImageView
+                android:id="@+id/tree_image"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:background="@drawable/plant"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tree_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tree_image"
+                android:text="PLANT A TREE WITH US"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/textViewPrice_tree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tree_textview"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tree_image"
+                android:text="₹ 800.00"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#020202"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_tree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPrice_tree"
+                android:layout_toRightOf="@id/tree_image"
+                android:text="PLANT"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:background="#ffff"
+            android:padding="8dp"
+            tools:context="simplifiedcoding.net.paytmpaymentsample.MainActivity">
+
+
+            <ImageView
+                android:id="@+id/donation_image"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:background="@drawable/heart"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/donation_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/donation_image"
+                android:text="HELP TO GROW OUR PROJECT"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textViewPrice_donation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donation_textview"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/donation_image"
+                android:text="₹________"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#020202"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_donation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPrice_donation"
+                android:layout_toRightOf="@id/donation_image"
+                android:text="DONATE"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:background="#ffff"
+            android:padding="8dp"
+            tools:context="simplifiedcoding.net.paytmpaymentsample.MainActivity"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="354dp">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:background="@drawable/coffee_cup"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="OFFER US A CUP OF COFFEE"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="₹ 80.00"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#020202"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPrice"
+                android:layout_toRightOf="@id/imageView"
+                android:text="OFFER"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

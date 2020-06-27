@@ -18,19 +18,22 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().setTitle("About Us");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         Element adsElement = new Element();
-        adsElement.setTitle("Advertise here");
+        adsElement.setTitle("Contact here");
 
         View aboutpage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.ic_info_outline_black_24dp)
-                .setDescription("welcome")
+                .setDescription("WELLCOME")
                 .addItem(new Element().setTitle("Version 1.0.0"))
                 .addItem(adsElement)
-                .addEmail("nayanjai2002@gmail.com")
+                .addEmail("enviroslc@gmail.com")
                 .addWebsite("www.slc.du.ac.in")
-                .addInstagram("https://www.instagram.com/invites/contact/?i=a4cnulv76qxg&utm_content=doczwyq")
+                .addInstagram("https://www.instagram.com/enviroslc?r=nametag")
                 .addItem(createCopyright())
                 .create();
         setContentView(aboutpage);

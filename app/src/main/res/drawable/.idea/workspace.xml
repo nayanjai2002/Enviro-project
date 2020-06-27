@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8e49aed-2a52-4330-a900-32aee7208a7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/render.experimental.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/EditProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/Reward_Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/Reward_Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/Upload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gift512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradient_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reward.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_edit_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/rewards_item_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/bouncy-loader.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/hello-boy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/splashy-loader.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/welcome.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/MainFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/MainFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/second_fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/second_fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/enviro2/splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/enviro2/splash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/drawer_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/drawer_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_second.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_second.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/slider1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/slider1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../menu/drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1dJqkD48rdZfaPdYMHJgXbX2Jai" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8e49aed-2a52-4330-a900-32aee7208a7f" name="Default Changelist" comment="" />
+      <created>1592153686850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592153686850</updated>
+    </task>
+    <servers />
+  </component>
+</project>
