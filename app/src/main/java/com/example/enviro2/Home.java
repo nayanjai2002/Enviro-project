@@ -28,15 +28,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     NavigationView navigationView;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  getSupportActionBar().setHomeButtonEnabled(true);
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
@@ -96,9 +99,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
         else if (menuItem.getItemId() == R.id.logout_nav) {
             //logout
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(),login.class));
-            finish();
+            logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
@@ -110,8 +111,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public void onButtonSelected() {
+      //FirebaseAuth.getInstance().signOut();
+    //startActivity(new Intent(getApplicationContext(),login.class));
+    }
+
+    private void logout() {
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),login.class));
+
+        Intent intent = new Intent(getApplicationContext(),login.class);
+        startActivity(intent);
     }
 
     }
