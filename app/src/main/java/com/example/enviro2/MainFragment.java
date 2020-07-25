@@ -32,6 +32,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private RecyclerView dailyTaskRecyclerView;
     ////DailyTaskLayout
 
+    ////AllTaskLayout
+    private TextView allTasklayoutTitle;
+    private RecyclerView allTaskRecyclerView;
+
+    ////AllTaskLayout
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -47,14 +53,50 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         dailytasklayoutModelList.add(new DailytasklayoutModel(R.drawable.gift512,"Task 3","Plant a little tulsi plant3","21 SUNDAY"));
 
         DailytasklayoutAdapter dailytasklayoutAdapter =new DailytasklayoutAdapter(dailytasklayoutModelList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        dailyTaskRecyclerView.setLayoutManager(linearLayoutManager);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
+        linearLayoutManager1.setOrientation(LinearLayoutManager.VERTICAL);
+        dailyTaskRecyclerView.setLayoutManager(linearLayoutManager1);
 
         dailyTaskRecyclerView.setAdapter(dailytasklayoutAdapter);
         dailytasklayoutAdapter.notifyDataSetChanged();
         ////DailyTaskLayout
 
+        //////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////
+        ///AllTaskLayout
+
+        allTasklayoutTitle = view.findViewById(R.id.all_task_title);
+        allTaskRecyclerView = view.findViewById(R.id.alltask_layout_recyclerview);
+        allTaskRecyclerView.setNestedScrollingEnabled(false);
+
+        List<AlltaskLayoutModel> alltasklayoutModelList = new ArrayList<>();
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.plant,"Task 1","Plant a little tulsi plant","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.coffee_cup,"Task 2","Plant a little tulsi plant2","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 3","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 4","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 5","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 6","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 7","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 8","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 9","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 10","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 11","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 12","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 13","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 14","Plant a little tulsi plant3","21 SUNDAY"));
+        alltasklayoutModelList.add(new AlltaskLayoutModel(R.drawable.gift512,"Task 15","Plant a little tulsi plant3","21 SUNDAY"));
+
+        AlltaskLayoutAdapter alltasklayoutAdapter =new AlltaskLayoutAdapter(alltasklayoutModelList);
+        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext());
+        linearLayoutManager2.setOrientation(LinearLayoutManager.VERTICAL);
+        allTaskRecyclerView.setLayoutManager(linearLayoutManager2);
+
+        allTaskRecyclerView.setAdapter(alltasklayoutAdapter);
+        alltasklayoutAdapter.notifyDataSetChanged();
+
+        ///AllTaskLayout
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
 
         return view;
     }

@@ -9,7 +9,7 @@
     android:background="@drawable/background_forall">
 
     <ImageView
-        android:id="@+id/dailytask_imageView"
+        android:id="@+id/alltask_imageView"
         android:layout_width="70dp"
         android:layout_height="80dp"
         android:layout_marginStart="18dp"
@@ -20,40 +20,40 @@
 
 
     <TextView
-        android:id="@+id/dailytask_no"
+        android:id="@+id/alltask_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_toEndOf="@id/dailytask_imageView"
+        android:layout_toEndOf="@id/alltask_imageView"
         android:text="TASK 1"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
         android:textColor="#E42E2E"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dailytask_imageView"
-        app:layout_constraintTop_toTopOf="@+id/dailytask_imageView" />
+        app:layout_constraintStart_toEndOf="@+id/alltask_imageView"
+        app:layout_constraintTop_toTopOf="@+id/alltask_imageView" />
 
     <TextView
-        android:id="@+id/dailytask_body"
+        android:id="@+id/alltask_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dailytask_no"
+        android:layout_below="@id/alltask_no"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
-        android:layout_toRightOf="@id/dailytask_imageView"
+        android:layout_toRightOf="@id/alltask_imageView"
         android:fontFamily="@font/carrois_gothic"
         android:text="Plant a small plant"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dailytask_imageView"
-        app:layout_constraintTop_toBottomOf="@+id/dailytask_no" />
+        app:layout_constraintStart_toEndOf="@+id/alltask_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/alltask_no" />
 
     <TextView
-        android:id="@+id/dailytask_date"
+        android:id="@+id/alltask_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dailytask_imageView"
-        app:layout_constraintTop_toBottomOf="@+id/dailytask_body" />
+        app:layout_constraintStart_toEndOf="@+id/alltask_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/alltask_body" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
